@@ -36,6 +36,6 @@ curl -X GET http://localhost:27017
 Все обьявления на одной странице
 
 * GetById
-* Получение одного обьявления
+Получение одного обьявления
 curl -X GET http://localhost:27017/products/id
 Где id - номер обьявления
