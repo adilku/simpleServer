@@ -59,7 +59,10 @@ func (c *Controller) AddProduct(w http.ResponseWriter, r *http.Request) {
             return
         }
     }
-
+    if product.Validate() != nil {
+        log.Println("Invalid product")
+        return
+    }
     log.Println(product)
     success := c.Repository.AddProduct(product) // adds the product to the DB
     if !success {
