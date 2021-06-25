@@ -10,7 +10,8 @@
 
 Методы:
 
-* AddProdcut : 
+* AddProdcut 
+Добавление обьявления в формате json 
 curl -X POST \                                  
 -d '{ 
     "title": "fist",
@@ -21,6 +22,7 @@ curl -X POST \
 http://localhost:27017/AddProduct
 
 * GetPage 
+Получение по номеру страницы и с выбором сортировки
 curl -X GET http://localhost:27017/Pages/?page=0&s=1
 Где page - номер страницы, s - тип сортировки
 s = 1 - по цене, возрастание
@@ -29,8 +31,11 @@ s = 3 - по дате добавления, возрастание
 s = 4 - по дате добавления, убывания
 
 * GetAll
+Получение всех обьявлений на одной странице
 curl -X GET http://localhost:27017
 Все обьявления на одной странице
 
+* GetById
+* Получение одного обьявления
 curl -X GET http://localhost:27017/products/id
 Где id - номер обьявления
